@@ -1,7 +1,9 @@
 {
+  "buildCommand": "pnpm --filter @workspace/suno run build",
   "outputDirectory": "artifacts/suno/dist/public",
+  "installCommand": "pnpm install --frozen-lockfile",
+  "framework": null,
   "rewrites": [
-    { "source": "/api/:path*", "destination": "/api/index" },
-    { "source": "/:path*", "destination": "/index.html" }
+    { "source": "/(.*)", "destination": "/index.html" }
   ]
 }
