@@ -1,0 +1,8 @@
+{
+  "name": "Remix: Dating App Simulator",
+  "description": "An interactive dating app simulator featuring profile deck swiping, profile creation, and real-time conversation powered by server-side Gemini AI.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}

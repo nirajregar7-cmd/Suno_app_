@@ -1,0 +1,19 @@
+<svg width="180" height="180" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1a0a04"/>
+      <stop offset="100%" style="stop-color:#0d0502"/>
+    </linearGradient>
+    <linearGradient id="orange" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#FF5500"/>
+      <stop offset="100%" style="stop-color:#FF2200"/>
+    </linearGradient>
+  </defs>
+  <rect width="512" height="512" rx="110" fill="url(#bg)"/>
+  <path d="M 140 220 A 116 116 0 0 1 372 220" fill="none" stroke="url(#orange)" stroke-width="22" stroke-linecap="round"/>
+  <rect x="120" y="210" width="38" height="68" rx="19" fill="url(#orange)"/>
+  <rect x="354" y="210" width="38" height="68" rx="19" fill="url(#orange)"/>
+  <circle cx="256" cy="358" r="38" fill="url(#orange)"/>
+  <text x="256" y="366" font-family="Arial, sans-serif" font-size="26" font-weight="900" fill="white" text-anchor="middle" dominant-baseline="middle">IN</text>
+  <text x="256" y="450" font-family="Arial Black, Arial, sans-serif" font-size="62" font-weight="900" fill="white" text-anchor="middle" letter-spacing="6">SUNO</text>
+</svg>

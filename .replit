@@ -1,0 +1,57 @@
+modules = ["nodejs-24", "postgresql-16"]
+
+[deployment]
+router = "application"
+deploymentTarget = "autoscale"
+
+[deployment.postBuild]
+args = ["pnpm", "store", "prune"]
+env = { "CI" = "true" }
+
+[workflows]
+runButton = "Project"
+
+[agent]
+stack = "PNPM_WORKSPACE"
+expertMode = true
+
+[postMerge]
+path = "scripts/post-merge.sh"
+timeoutMs = 20000
+
+[nix]
+channel = "stable-25_05"
+
+[[ports]]
+localPort = 8080
+externalPort = 80
+
+[[ports]]
+localPort = 8081
+externalPort = 8081
+
+[[ports]]
+localPort = 8082
+externalPort = 5000
+
+[[ports]]
+localPort = 8090
+externalPort = 3002
+
+[[ports]]
+localPort = 8091
+externalPort = 3003
+
+[[ports]]
+localPort = 20112
+externalPort = 3001
+
+[[ports]]
+localPort = 23065
+externalPort = 3000
+
+[userenv]
+
+[userenv.shared]
+VAPID_PUBLIC_KEY = "BNwEbJ7OyBKUafg7AJjUGw7wRRGpvDCztIwoQYw-671BkbJSK3aQ64WrAdcteuLY53xYofc_vB283EhT2pKpt84"
+VAPID_PRIVATE_KEY = "AToNCS1tI5_5egzvRB0lMX3TDk9sgcdIrWZIlKFWmUw"

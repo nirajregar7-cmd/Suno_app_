@@ -1,0 +1,31 @@
+kind = "web"
+previewPath = "/"
+title = "Suno Safe Spaces"
+version = "1.0.0"
+id = "artifacts/suno"
+router = "path"
+
+[[integratedSkills]]
+name = "react-vite"
+version = "1.0.0"
+
+[[services]]
+name = "web"
+paths = [ "/" ]
+localPort = 23065
+
+[services.development]
+run = "pnpm --filter @workspace/suno run dev"
+
+[services.production]
+build = [ "pnpm", "--filter", "@workspace/suno", "run", "build" ]
+publicDir = "artifacts/suno/dist/public"
+serve = "static"
+
+[[services.production.rewrites]]
+from = "/*"
+to = "/index.html"
+
+[services.env]
+PORT = "23065"
+BASE_PATH = "/"

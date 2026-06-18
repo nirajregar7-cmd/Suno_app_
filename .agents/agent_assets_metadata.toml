@@ -1,0 +1,14 @@
+uploads = []
+outputs = []
+
+[[generated]]
+id = "TR-VWCecBhwLR07bH67GN"
+uri = "file://artifacts/suno-video/public/images/texture.png"
+type = "image"
+title = "indian texture pattern"
+
+[[generated]]
+id = "55fblUGNypklHiDN1Mt6n"
+uri = "file://artifacts/suno-video/public/images/community.png"
+type = "image"
+title = "community hands"
